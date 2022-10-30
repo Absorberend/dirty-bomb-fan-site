@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>My Dirty Bomb Site</title>
+</head>
+<body>
+    <header>
+            <div class="logo_container">
+                <div class="logo_text">
+                    <a href="index.html">Dirty Bomb</a>
+                </div> 
+                <a href="index.html"><img src="img/vassili.png" alt="vassili logo" class="logo"></a>
+            </div>
+        <nav>
+            <ol class="nav_menu">
+                <li><a href="index.html">Home</a></li>
+                <li>About
+                    <ol class="submenu">
+                        <li><a href="loadouts.html">Loadouts</a></li>
+                        <li><a href="dirty_bomb.html">Dirty Bomb</a></li>
+                    </ol>
+                </li>
+                <li id="menu_home">Config</li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ol>
+        </nav>
+    </header>
+    <main>
+        <section class="config_opmaak">
+            <h1>Dirty Bomb config files</h1>
+            <p>I get a lot of questions about what settings I use and if people can have my config. You can download my config below and get the same settings as I do.</p>
+            <p>Dirty Bomb is heavily tweak-able. From HUD elements to visuals, almost everything can be changed to some degree. Dirty Bomb uses four files to save your settings, which are these:</p>
+            <ul>
+                <li>ShooterEngine.ini (Graphics/Base settings)</li>
+                <li>ShooterGame.ini (Game settings)</li>
+                <li>ShooterInput.ini (Binds)</li>
+                <li>ShooterUI.ini (HUD)</li>
+            </ul>
+            <p>These files can be found at:</p>
+            <p><i>*:\My Documents\My Games\UnrealEngine3\ShooterGame\Config</i><br>
+            * being whatever hard drive your <i>\My Documents</i> folder is located at.</p>
+            <p>You can download my files (settings) here:</p>
+            <ul class="config_download">
+                <li>&#160;<a href="https://www.upload.ee/files/14184861/DB-cfg.zip.html" target="_blank">Config download</a></li>
+            </ul>
+            <p>If you need help installing the config see the instructions below.</p>
+        </section>
+        <section  class="config_opmaak">
+            <h2>Config installation</h2>
+            <ol class="config_tutorial">
+                <li>&#160;Go to <i>\Documents\My Games\UnrealEngine3\ShooterGame\Config</i></li>
+                <li>&#160;Select ShooterEngine, ShooterGame, ShooterInput & ShooterUI</li>
+                <li>&#160;Copy them to a random folder to your desktop for backup</li>
+                <li>&#160;Copy the .ini files (from the download below) into the Step 1 folder and overwrite them</li>
+                <li>&#160;Right click each following file and select properties to see if they are read only. ShooterEngine, ShooterInput and ShooterUI should all be read only.</li>
+                <li>&#160;Run the game, check on how it runs. </li>
+            </ol>
+        </section>
+        <section class="config_opmaak">
+            <h2>Startup options</h2>
+            <p>If you're interested I have some startup options as well to remove bloom and fog from the game. This really helps and also bootst your FPS. All you have to do is create a file, let's call it exec.txt, in <i>\SteamApps\common\Dirty Bomb\Binaries</i>. In that file write every command on a new line, like this:</p>
+            <ol class="startup_options_container">
+                <li>BloomSize 0</li>
+                <li>FogDensity 0</li>
+                <li>ColorGrading 2</li>
+                <li>RawInputUpdateTest true</li>
+                <li>Stat FPS</li>
+            </ol>
+            <p>Then rightclick Dirty Bomb in Steam, select <i>Set Launch</i> Options in the General tab and add <i>-exec=exec.txt</i> <a href="https://i.imgur.com/RCfVkrK.png">(screenshot)</a></p>
+            <p>If you want the .txt file somewhere else you can also use a full path after -exec, just make sure you put it in quotes if the path contains spaces.</p>
+        </section>
+    </main>
+    <footer>
+        <p class="footer_text">&copy; by [C4] Requlia (AmAzOn)</p>
+    </footer>
+</body>
+</html>

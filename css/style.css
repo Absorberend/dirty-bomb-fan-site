@@ -1,0 +1,933 @@
+body {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 0.4em;
+    background: #434d65;
+    background-image: linear-gradient(to top, #434d65 0%, #a2acb6 66%);
+    background-repeat: no-repeat;
+}
+
+header {
+    border-block-end: 2px solid black;
+    margin-block-end: 1em;
+    display: grid;
+    gap: 0.5em;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+     "logo"
+     "menu";
+}
+
+:root {
+    --border_color: #959aa2;
+    --text_color: #d5d9de;
+}
+  
+/* Logo */
+
+.logo_container {
+    grid-area: logo;
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.logo_text {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0.6em;
+    font-family: 'Black Ops One', cursive;
+    text-transform: uppercase;
+    text-shadow: 4px 3px 0 #7A7A7A;
+} 
+
+header a {
+    color: white;
+    text-decoration: none;
+}
+
+.logo {
+    border-block-end: 2px solid black;
+    aspect-ratio: 1 / 1;
+    width: 25%;
+}
+
+/* Navigatie */
+
+nav {
+    grid-area: menu;
+}
+
+.nav_menu {
+    display: flex;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+nav ol,
+nav li {
+    margin: 0;
+    padding:0;
+    list-style: none;
+    font-family: 'Black Ops One', cursive;
+}
+
+nav a {
+    text-decoration: none;
+    color: hsl(0, 0%, 0%);
+    text-decoration-color: red;
+}
+
+.nav_menu li:hover {
+    text-decoration: underline;
+    text-decoration-color: red;
+}
+
+#menu_home {
+    text-decoration: underline;
+    color: white;
+}
+
+.submenu {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    padding-left: 0;
+    left: 15%;
+    display: none;
+    background: linear-gradient(to top, #434d65 0%, #a2acb6 66%);
+    border: 2px solid black;
+}
+
+  .nav_menu li:hover .submenu {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+    min-width: 7em;
+    text-align: left;
+    padding-top: 20px;
+    box-shadow: 0px 3px 5px -1px #ccc;
+  }
+
+  ol li ol li {
+    clear: both;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+    border-style: none;
+  }
+
+
+  ol li ol li a:hover {
+    padding-left: 5px;
+    border-left: 2px solid var(--border_color);
+    transition: all 0.3s ease;
+  }
+
+
+/* Main foto */
+
+.mainfoto {
+    background-image: url('../img/mainfoto.jpg');
+    background-size: cover;
+    background-position: center;
+    box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+    border: 0.15em solid black;
+    aspect-ratio: 2 / 1;
+    border-radius: 10%;
+    background-repeat: no-repeat;
+    margin: 0 0 0.5em 0;
+    width: calc((100% - 0.3em) - 5px);
+    margin-block-end: 1em;
+}
+
+/* Content */
+
+.articles_container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5em;
+    margin-block-end: 1em;
+}
+
+.article_opmaak  {
+    background-color: #373d3f;
+    border:0.12em solid var(--border_color);
+    color: var(--text_color);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 0.7em;
+    padding: 0 0.5em 0 0.5em;
+}
+
+.article_opmaak a {
+    text-decoration: none;
+    color: var(--text_color);
+}
+
+.article_opmaak h2 {
+    text-decoration: underline;
+    text-decoration-color: hsla(0, 0%, 0%, 0.4)
+}
+
+/* Content */
+
+.content_container {
+    display: grid;
+    gap: 0.5em;
+    grid-template-columns: 1fr;
+    margin-block-end: 2em;
+    grid-template-areas:
+     "content_header"
+     "content_footer"
+     "content1"
+     "content2"
+     "content3"
+     "content4"
+     "content5";
+}
+
+.content_container {
+    font-family: 'Black Ops One', cursive;
+}
+
+.content_container h2 {
+    margin-inline-start: calc(1em - 0.36em);
+    margin-block-end: 0;
+}
+
+.content_container a {
+    text-decoration: underline;
+    color: white;
+}
+
+.content_opmaak {
+    color: var(--text_color);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    justify-content: center;
+    width: calc(100% - 2.24em);
+    aspect-ratio: 2 / 1;
+    border:0.12em solid var(--border_color);
+    margin: 0em 1em 0 1em;
+}
+
+.content_header {
+    grid-area: content_header;
+}
+
+.content_footer {
+    grid-area: content_footer;
+    margin-inline-start: 1.48em;
+    font-size: 0.7em;
+}
+
+.content1 {
+    grid-area: content1;
+}
+    
+.content2 {
+    grid-area: content2;
+}
+    
+.content3 {
+    grid-area: content3;
+}
+    
+.content4 {
+    grid-area: content4;
+}
+    
+.content5 {
+    grid-area: content5;
+}
+
+/* Plaatjes */
+
+.plaatjes_container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5em;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.plaatjes_opmaak {
+    background-color: #55585b;
+    border:0.12em solid var(--border_color);
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 0.7em;
+    padding: 1.5em;
+    border-radius: 5%;
+}
+
+.plaatjes_container figcaption {
+    margin: 0em 1em 0 1em;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.plaatjes_opmaak  span {
+    color: var(--text_color);
+    margin-top: 1em;
+}
+
+.plaatje_opmaak-inside {
+    color: var(--text_color);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    justify-content: center;
+    width: calc(100% - 2.24em);
+    aspect-ratio: 0.8 / 1;
+    border:0.12em solid black;
+    margin: 0em 1em 0 1em;
+    border-radius: 5%;
+}
+
+.plaatje1 {
+    grid-area: plaatje1;
+}
+
+.plaatje1_text {
+    grid-area: plaatje1_text;
+}
+    
+.plaatje2 {
+    grid-area: plaatje2;
+}
+
+.plaatje2_text {
+    grid-area: plaatje2_text;
+}
+
+.plaatje3 {
+    grid-area: plaatje3;
+}
+
+.plaatje3_text {
+    grid-area: plaatje3_text;
+}
+
+/* Footer-Text */
+.footer_text {
+    margin-top: 2em;
+    color: var(--text_color);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 0.6em;
+}
+
+/* Contact pagina */
+
+.contact_form {
+    background-color: #373d3f;
+    background-image: url('../img/proxy.png');
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border:0.12em solid var(--border_color);
+    color: var(--text_color);
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1em;
+    padding: 0 0.5em 0 0.5em;
+    margin: 0.5em;
+    width: calc(100% - 2.24em);
+}
+
+.form_grid {
+    width: calc(100% - 0.82em);
+    margin: 2em auto;
+    color: var(--text_color);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: grid;
+    gap: 0.2em;
+    grid-template-columns: 0.5fr 1fr 0.2fr;
+    grid-template-areas:
+    "form_header form_header ."
+    "naam_label naam ."
+    "telnr_label telnr ."
+    "email_label email ."
+    "skill_label skill skill_span"
+    "opmerkingen_label opmerkingen ."
+    ". button .";
+    text-align: start;
+}
+
+.form_grid h1 {
+    grid-area: form_header;
+    text-decoration: underline;
+    text-decoration-color: black;
+    text-align: center;
+}
+
+.form_grid .naam_label {
+    grid-area: naam_label;
+}
+
+.form_grid .telnr_label {
+    grid-area: telnr_label;
+}
+
+.form_grid .email_label{
+    grid-area: email_label;
+} 
+
+.form_grid .skill_label {
+    grid-area: skill_label;
+}
+
+.form_grid .skill_span {
+    grid-area: skill_span;
+    font-weight: bold;
+}
+
+.form_grid .opmerkingen_label {
+    grid-area: opmerkingen_label;
+}
+
+.form_grid #naam {
+    grid-area: naam;
+}
+
+.form_grid #telnr {
+    grid-area: telnr;
+}
+
+.form_grid #email {
+    grid-area: email;
+}
+
+.form_grid #skill_level {
+    grid-area: skill;
+}
+
+.form_grid #opmerkingen {
+    grid-area: opmerkingen;
+}
+
+.button1 {
+    grid-area: button;
+    width: 40%;
+}
+
+/* Config pagina */
+
+.config_opmaak {
+    background-color: #373d3f;
+    border:0.12em solid var(--border_color);
+    color: var(--text_color);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 0.8em;
+    padding: 1em;
+    margin: 1em;
+    border-radius: 1em 1em;
+}
+
+.config_download {
+    list-style-type: "\21D3";
+}
+
+.config_tutorial {
+    list-style-type: "\27A4";
+}
+
+.config_opmaak h1,
+.config_opmaak h2 {
+    margin-block-start: 0;
+    text-decoration: underline;
+    text-decoration-color: hsla(0, 0%, 0%, 0.4)
+}
+.config_opmaak a {
+    color: var(--text_color);
+    text-decoration: underline;
+    text-decoration-color: var(--text_color);
+    font-weight: bold;
+}
+
+.config_opmaak a:hover {
+    text-decoration-color: red;
+}
+
+.startup_options_container {
+    background-color: #55585b;
+    width: 40%;
+    border:0.12em solid var(--border_color);
+    padding: 1.5em;
+    color: black;
+    font-weight: 600;
+    border-radius: 3%;
+    list-style: none;
+}
+
+/* Resources pagina */
+
+.resources_opmaak {
+    background-color: #373d3f;
+    border:0.12em solid var(--border_color);
+    color: var(--text_color);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 0.8em;
+    padding: 1em;
+    margin: 1em;
+    border-radius: 1em 1em;
+}
+
+.resource_header1 {
+    color: white;
+    margin-inline-start: 0.36em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-decoration: underline;
+    text-decoration-color: hsla(0, 0%, 0%, 0.4)
+}
+
+.resources_grid1 {
+    display: grid;
+    gap: 0 2em;
+    align-content: center;
+    grid-template-columns: 0.2fr 1fr;
+    grid-template-areas:
+     "rimage1 rhead1"
+     "rimage1 rpar1"
+     "rimage1 rlink1";
+     align-items: center;
+}
+
+.resources_grid1 h2 {
+    grid-area: rhead1;
+}
+
+.resources_grid1 p {
+    grid-area: rpar1;
+}
+
+.resources_grid1 img {
+    grid-area: rimage1;
+    width: 100%;
+}
+
+.resources_grid1 a {
+    grid-area: rlink1;
+}
+
+.resources_grid2 {
+    display: grid;
+    gap: 0 2em;
+    align-content: center;
+    grid-template-columns: 0.2fr 1fr;
+    grid-template-areas:
+     "rimage2 rhead2"
+     "rimage2 rpar2"
+     "rimage2 rlink2";
+     align-items: center;
+}
+
+.resources_grid2 h2 {
+    grid-area: rhead2;
+}
+
+.resources_grid2 p {
+    grid-area: rpar2;
+}
+
+.resources_grid2 img {
+    grid-area: rimage2;
+    width: 100%;
+}
+
+.resources_grid2 a {
+    grid-area: rlink2;
+}
+
+.resources_grid3 {
+    display: grid;
+    gap: 0 2em;
+    align-content: center;
+    grid-template-columns: 0.2fr 1fr;
+    grid-template-areas:
+     "rimage3 rhead3"
+     "rimage3 rpar3"
+     "rimage3 rlink3";
+     align-items: center;
+}
+
+.resources_grid3 h2 {
+    grid-area: rhead3;
+}
+
+.resources_grid3 p {
+    grid-area: rpar3;
+}
+
+.resources_grid3 img {
+    grid-area: rimage3;
+    width: 80%;
+}
+
+.resources_grid3 a {
+    grid-area: rlink3;
+}
+
+.resources_opmaak a {
+    color: var(--text_color);
+    text-decoration: underline;
+    text-decoration-color: var(--text_color);
+    font-weight: bold;
+}
+
+.resources_opmaak a:hover {
+    text-decoration-color: red;
+}
+
+/*Loadouts pagina */
+
+.loadout_intro_opmaak  {
+    background-color: #373d3f;
+    border:0.12em solid var(--border_color);
+    color: var(--text_color);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 0.9em;
+    padding: 1.5em;
+}
+
+.loadout_intro_opmaak h1,
+.loadout_intro_opmaak h2 {
+    text-decoration: underline;
+    text-decoration-color: hsla(0, 0%, 0%, 0.4)
+}
+
+.table_section {
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+    justify-content: center;
+    margin: 1em 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    flex-wrap: wrap;
+}
+
+.table_section table,
+.table_section th,
+.table_section td{
+    border: 1px solid black;
+    color: black;
+}
+
+.table_section th,
+.table_section td {
+    padding: 0.3em;
+}
+
+.table_section thead th {
+    font-size: 1.2em;
+    background-color: rgb(90, 99, 102);
+}
+
+.table_section tbody th {
+    background-color: hsl(214, 3%, 46%);
+}
+
+.table_section tbody td {
+    background-color: var(--border_color);
+}
+
+.loadout_opmaak {
+    background-color: #55585b;
+    border:0.12em solid var(--border_color);
+    color: var(--text_color);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 0.9em;
+    padding: 1.5em;
+    border-radius: 1em 1em;    
+    margin: 1em;
+}
+
+.aimee_loadout {
+    display: grid;
+    gap: 2em;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+     "aimee_text"
+     "aimee_img";
+    justify-items: center;
+    align-items: center;
+}
+
+.aimee_loadout_wrapper {
+    grid-area: aimee_text;
+}
+
+.aimee_loadout img {
+    grid-area: aimee_img;
+}
+
+.aimee_loadout h2 {
+    text-decoration: underline;
+    text-decoration-color: hsla(0, 0%, 0%, 0.4);
+}
+
+.vassili_loadout {
+    display: grid;
+    gap: 2em;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+     "vassili_text"
+     "vassili_img";
+    justify-items: center;
+    align-items: center;
+}
+
+.vassili_loadout_wrapper {
+    grid-area: vassili_text;
+}
+
+.vassili_loadout img {
+    grid-area: vassili_img;
+}
+
+.vassili_loadout h2 {
+    text-decoration: underline;
+    text-decoration-color: hsla(0, 0%, 0%, 0.4);
+}
+
+.redeye_loadout {
+    display: grid;
+    gap: 2em;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+     "redeye_text"
+     "redeye_img";
+    justify-items: center;
+    align-items: center;
+}
+
+.redeye_loadout_wrapper {
+    grid-area: redeye_text;
+}
+
+.redeye_loadout img {
+    grid-area: redeye_img;
+}
+
+.redeye_loadout h2 {
+    text-decoration: underline;
+    text-decoration-color: hsla(0, 0%, 0%, 0.4);
+}
+
+.loadout_opmaak img {
+    border: 1px black solid;
+    border-radius: 5%;
+}
+
+/*About Dirty Bomb pagina */
+
+.db_head {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-block-end: 4em;
+}
+
+.db_logo {
+    width: 100%;
+}
+
+.db_vid {
+    display: flex;
+    justify-self: center;
+    border: 1px solid black;
+    margin: 0.12em;
+}
+
+.db_header {
+    font-family: 'Black Ops One', cursive;
+}
+
+.gameplay {
+    background-color: #373d3f;
+    border:0.12em solid var(--border_color);
+    color: var(--text_color);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 0.9em;
+    padding: 0 0.5em 0 0.5em;
+}
+
+/* Media queries */
+@media screen and (min-width: 700px) {
+    header {
+        display: flex;
+    }
+    .logo_container {
+        flex: 40%;
+        text-align: start;
+        margin-bottom: -5px;
+    }
+    .logo_text {
+        left: 20%;
+        font-size: 0.9em;
+    }
+    .logo {
+        border: none;
+        width: 40%;
+    }
+    nav {
+        display: flex;
+        width: 100%;
+    }
+    .nav_menu {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        align-self: end;
+    }
+    .mainfoto {
+        aspect-ratio: 4 / 1;
+    }
+    .articles_container {
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+    }
+    .article_opmaak  {
+        font-size: 0.9em;
+    }
+    .content_container {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        gap: 0.12em;
+        grid-template-areas:
+        "content_header content_header content_header content_header content_header content_header"
+        "content_footer content_footer content_footer content_footer content_footer content_footer"
+        "content1 content1 content4 content4 content3 content3"
+        "content2 content2 content2 content5 content5 content5";
+        width: calc(100% - (2 * 0.12em))
+    }
+    .content_opmaak {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .content_container h2 {
+        margin-inline-start: 0;
+    }
+    .content_footer {
+        margin-inline-start: 0;
+    }
+    .plaatjes_opmaak1 {
+        display: grid;
+        grid-template-columns: 0.5fr 0.5fr;
+        grid-template-areas:
+         "plaatje1 plaatje1_text";
+        font-size: 0.7em;
+    }
+    .plaatjes_opmaak2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+         "plaatje2_text plaatje2";
+         font-size: 0.7em;
+    }
+    .plaatjes_opmaak3 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+         "plaatje3 plaatje3_text";
+         font-size: 0.7em;
+    }
+    .plaatjes_container {
+        width: 60%;
+        margin: 0 auto;
+    }
+    #map {
+        aspect-ratio: 3 / 1;
+    }
+    .form_grid {
+        width: 75%;
+    }
+    .contact_form {
+        background-size: 50%;
+        background-position: right;
+    }
+    .config_opmaak {
+        font-size: 0.9em;
+    }
+    .startup_options_container {
+        width: 25%;
+    }
+    .table_section {
+        flex-wrap: nowrap;
+    }    
+    .aimee_loadout {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+         "aimee_text aimee_img"
+    }
+    .vassili_loadout {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+         "vassili_text vassili_img"
+    }
+    .redeye_loadout {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+         "redeye_text redeye_img"
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .logo_container {
+        flex: 70%;
+    }
+    .mainfoto {
+        aspect-ratio: 3 / 1;
+    }
+    .content_container {
+        width: calc(100% - (2 * 0.12em));
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+        "content_header content_header content_header content_header content_header"
+        "content_footer content_footer content_footer content_footer content_footer"
+        "content1 content2 content3 content4 content5";
+    }
+    .content_opmaak {
+        aspect-ratio: 1.6 / 1;
+    }
+    .plaatjes_opmaak1 {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "plaatje1"
+        "plaatje1_text";
+    }
+    .plaatjes_opmaak2 {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "plaatje2"
+        "plaatje2_text";
+    }
+    .plaatjes_opmaak3 {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "plaatje3"
+        "plaatje3_text";
+    }
+    .plaatjes_container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;  
+        width: 100%;
+    }
+    #map {
+        aspect-ratio: 4 / 1;
+    }
+    .contact_form {
+        background-size: 40%;
+    }
+    .form_grid {
+        width: 50%;
+    }
+    .startup_options_container {
+        width: 20%;
+    }
+}

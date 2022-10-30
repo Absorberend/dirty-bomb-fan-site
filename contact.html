@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>My Dirty Bomb Site</title>
+</head>
+<body>
+    <header>
+            <div class="logo_container">
+                <div class="logo_text">
+                    <a href="index.html">Dirty Bomb</a>
+                </div> 
+                <a href="index.html"><img src="img/vassili.png" alt="vassili logo" class="logo"></a>
+            </div>
+        <nav>
+            <ol class="nav_menu">
+                <li><a href="index.html">Home</a></li>
+                <li>About
+                    <ol class="submenu">
+                        <li><a href="loadouts.html">Loadouts</a></li>
+                        <li><a href="dirty_bomb.html">Dirty Bomb</a></li>
+                    </ol>
+                </li>
+                <li><a href="config.html">Config</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li id="menu_home">Contact</li>
+            </ol>
+        </nav>
+    </header>
+    <main>
+        <section class="contact_form">
+            <form action="" method="get" id="formulier" class="form_grid">
+                <h1>Feel free to leave me a message.</h1>
+                <label for="naam" class="naam_label">Name:</label>
+                <input name="naam" id="naam" required>
+                <label for="telnr" class="telnr_label">Tel. number:</label>
+                <input type="tel" id="telnr" name="telefoonnummer">
+                <label for="email" class="email_label">E-mail:</label>
+                <input type="email" name="e-mail" id="email" placeholder="john.doe@splashdamage.com" required>
+                <label for="opmerkingen" class="opmerkingen_label">Message:</label>
+                <label for="skill_level" class="skill_label">Skill level:</label>
+                <input id="skill_level" type="range" min="1" max="10" step="1" name="skill_level">
+                <div class="skill_span">Level:&#160;<span class="waarde"></span></div>
+                <textarea rows="10" name="opmerkingen" id="opmerkingen" required></textarea>
+                <button type="submit" class="button1">Send message</button>
+            </form>
+        </section>
+        <script>
+            const slider = document.getElementById('skill_level');
+            const waarde = document.querySelector('.waarde');
+            slider.addEventListener("input", () => {
+            waarde.innerHTML = slider.value;
+            });
+            waarde.innerHTML = slider.value;
+        </script>
+    </main>
+    <footer>
+        <p class="footer_text">&copy; by [C4] Requlia (AmAzOn)</p>
+    </footer>
+</body>
+</html>
