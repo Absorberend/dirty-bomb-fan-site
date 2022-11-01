@@ -293,6 +293,7 @@ nav a {
 
 .plaatje1_text {
     grid-area: plaatje1_text;
+    font-size: 1.25em;
 }
     
 .plaatje2 {
@@ -301,6 +302,7 @@ nav a {
 
 .plaatje2_text {
     grid-area: plaatje2_text;
+    font-size: 1.25em;
 }
 
 .plaatje3 {
@@ -309,6 +311,7 @@ nav a {
 
 .plaatje3_text {
     grid-area: plaatje3_text;
+    font-size: 1.25em;
 }
 
 /* Footer-Text */
