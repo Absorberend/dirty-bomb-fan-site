@@ -7,5 +7,5 @@ This project resulted in an A+!
 # Design
 ![My solution](./img/design.png "My solution")
 
-View my solution at: https://rococo-lokum-fe4de0.netlify.app
+View my page at: https://rococo-lokum-fe4de0.netlify.app
 
